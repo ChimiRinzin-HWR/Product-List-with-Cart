@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product list with cart</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="./index.css" /></head
+  ><link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet"
+  />
+  <body>
+    <main>
+      <div class="left">
+        <h1>Desserts</h1>
+        <div class="gridlay"></div>
+      </div>
+      <div class="cart">
+        <h2 class="headerfirst">Your Cart (<span class="amount">0</span>)</h2>
+        <div class="empty">
+          <div class="emptyimg">
+            <img src="./assets/images/illustration-empty-cart.svg" alt="" />
+          </div>
+          <p class="emptymessage">Your added items will appear here</p>
+        </div>
+        <div class="smallercartmain">
+          <div class="smallercart"></div>
+          <div class="smallercart1"></div>
+        </div>
+      </div>
+      <div class="confirm">
+        <img
+          class="tick"
+          src="./assets/images/icon-order-confirmed.svg"
+          alt=""
+        />
+        <h2 class="ordermessage">Order Confirmed</h2>
+        <p class="greet">
+          Your order ID is <strong class="orderid"></strong>. We hope you enjoy
+          your food!
+        </p>
+        <div class="orders">
+          <div class="orders1"></div>
+          <div class="orders2"></div>
+        </div>
+        <button class="startnew">Start New Order</button>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.linkedin.com/in/chimi-rinzin-20178a291/"
+          >Chimi Rinzin</a
+        >.
+      </div>
+    </footer>
+  </body>
+  <script src="./index.js"></script>
+</html>
