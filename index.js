@@ -14,7 +14,7 @@ const orderid = document.querySelector(".orderid");
 const color = getComputedStyle(document.documentElement).getPropertyValue('--Red');
 const amount = document.querySelector(".amount");
 var amountsum = 0;
-
+flag = false;
 document.addEventListener('DOMContentLoaded', () =>{
     fetch('./data.json')
         .then(response => response.json())
@@ -184,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 maindiv.appendChild(strong5);
 
                 confirm.appendChild(maindiv);
+
                 div3.addEventListener('click', () => {
                     div31.style.display = "flex";
                     div4.style.display = "flex";
@@ -215,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                     })
                     if(localcounter == 1) {
                         cart1.style.display = "none";
-                        empty.style.display = "block"
+                        empty.style.display = "block";
                     }
                     div4.style.display = "none";
                     p12.textContent = 1;
@@ -276,6 +277,23 @@ document.addEventListener('DOMContentLoaded', () =>{
                 })
                 newbutton.addEventListener('click', () =>{
                     confirmReal.style.display = "none";
+                    amount.textContent = 0;
+                    div4.style.display = "none";
+                    p12.textContent = 1;
+                    var strong2value = parseFloat(strong2.textContent.replace("$", ""));
+                    totalSum -= strong2value;
+                    strong1.textContent = 1 + "x";
+                    div31.style.display = "none";
+                    strong2.textContent = "$0";
+                    h22.textContent = "$" + totalSum.toFixed(2);
+                    maindiv.style.display = "none";
+                    strong4.textContent = strong1.textContent;
+                    strong5.textContent = strong2.textContent;
+                    h23.textContent = h22.textContent;
+                    img1.style.border = `none`
+                    img12.style.border = `none`
+                    cart1.style.display = "none";
+                    empty.style.display = "block";
                 })
                 
             })
