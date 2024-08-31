@@ -269,6 +269,37 @@ document.addEventListener('DOMContentLoaded', () =>{
                         amountsum --;
                         amount.textContent = amountsum;
                     }
+                    if(value === 0){
+                        var children = cart.childNodes;
+                        var array = Array.prototype.slice.call(children);
+                        var localcounter = 0;
+                        array.forEach(function(nani){
+                            if(nani.style.display == "flex") {
+                                localcounter++
+                            };
+                        })
+                        if(localcounter == 1) {
+                            cart1.style.display = "none";
+                            empty.style.display = "block";
+                        }
+                        div4.style.display = "none";
+                        p12.textContent = 1;
+                        var strong2value = parseFloat(strong2.textContent.replace("$", ""));
+                        totalSum -= strong2value;
+                        var strong1value = parseInt(strong1.textContent.replace("x", ""));
+                        amountsum -= strong1value;
+                        amount.textContent = amountsum;
+                        strong1.textContent = 1 + "x";
+                        div31.style.display = "none";
+                        strong2.textContent = "$0";
+                        h22.textContent = "$" + totalSum.toFixed(2);
+                        maindiv.style.display = "none";
+                        strong4.textContent = strong1.textContent;
+                        strong5.textContent = strong2.textContent;
+                        h23.textContent = h22.textContent;
+                        img1.style.border = `none`
+                        img12.style.border = `none`
+                    }
                 });
                 but.addEventListener('click', () => {
                     confirmReal.style.display = "block";
